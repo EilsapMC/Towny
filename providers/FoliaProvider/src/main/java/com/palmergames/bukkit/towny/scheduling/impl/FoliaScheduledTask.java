@@ -5,9 +5,13 @@ import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.NotNull;
 
 public class FoliaScheduledTask implements com.palmergames.bukkit.towny.scheduling.ScheduledTask {
-	private final ScheduledTask task;
+	private ScheduledTask task;
 	
-	public FoliaScheduledTask(final ScheduledTask task) {
+	public FoliaScheduledTask(ScheduledTask task) {
+		this.task = task;
+	}
+	
+	public void setScheduledTask(ScheduledTask task) {
 		this.task = task;
 	}
 
